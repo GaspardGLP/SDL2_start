@@ -4,13 +4,15 @@
 #include <time.h>
 #include <SDL.h>
 
+#define main SDL_main
+
 int initialize(SDL_Window** window, SDL_Renderer** renderer, int width, int height) {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         printf("SDL could not be initialized %s\n", SDL_GetError());
         return 0;
     }
 
-    *window = SDL_CreateWindow("DVD Logo", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
+    *window = SDL_CreateWindow("Casse-Brique", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
     if (*window == NULL) {
         printf("ERROR: Failed to create the window %s\n", SDL_GetError());
         SDL_Quit();
@@ -28,40 +30,63 @@ int initialize(SDL_Window** window, SDL_Renderer** renderer, int width, int heig
     return 1;
 }
 
-void events_handling(int* running) {
+void handle_events(int* running, SDL_Rect* paddle, int window_width) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
             *running = 0;
         }
     }
-}
 
-void update_logo_position(SDL_Rect* logo, float* speed_x, float* speed_y, int window_width, int window_height, Uint8* r, Uint8* g, Uint8* b, float deltaTime) {
-    logo->x += (int)(*speed_x * deltaTime);
-    logo->y += (int)(*speed_y * deltaTime);
-
-    if (logo->x <= 0 || logo->x + logo->w >= window_width) {
-        *speed_x = -*speed_x;
-        *r = (Uint8)(rand() % 256);
-        *g = (Uint8)(rand() % 256);
-        *b = (Uint8)(rand() % 256);
+    const Uint8* keystate = SDL_GetKeyboardState(NULL);
+    if (keystate[SDL_SCANCODE_LEFT]) {
+        paddle->x -= 10;
+        if (paddle->x < 0) paddle->x = 0;
     }
-
-    if (logo->y <= 0 || logo->y + logo->h >= window_height) {
-        *speed_y = -*speed_y;
-        *r = (Uint8)(rand() % 256);
-        *g = (Uint8)(rand() % 256);
-        *b = (Uint8)(rand() % 256);
+    if (keystate[SDL_SCANCODE_RIGHT]) {
+        paddle->x += 10;
+        if (paddle->x + paddle->w > window_width) paddle->x = window_width - paddle->w;
     }
 }
 
-void render_logo(SDL_Renderer* renderer, SDL_Rect* logo, Uint8 r, Uint8 g, Uint8 b) {
+void update_ball(SDL_Rect* ball, float* ball_speed_x, float* ball_speed_y, SDL_Rect* paddle, int window_width, int window_height) {
+    ball->x += (int)*ball_speed_x;
+    ball->y += (int)*ball_speed_y;
+
+    // Collision avec les murs
+    if (ball->x <= 0 || ball->x + ball->w >= window_width) {
+        *ball_speed_x = -*ball_speed_x;
+    }
+    if (ball->y <= 0) {
+        *ball_speed_y = -*ball_speed_y;
+    }
+
+    // Collision avec la raquette
+    if (SDL_HasIntersection(ball, paddle)) {
+        *ball_speed_y = -*ball_speed_y;
+        ball->y = paddle->y - ball->h; // Ajuster pour éviter de rester coincé
+    }
+
+    // Si la balle sort de l'écran (en bas)
+    if (ball->y > window_height) {
+        printf("Game Over!\n");
+        ball->x = window_width / 2 - ball->w / 2;
+        ball->y = window_height / 2 - ball->h / 2;
+        *ball_speed_x = 200.0f * (rand() % 2 == 0 ? 1 : -1);
+        *ball_speed_y = 200.0f;
+    }
+}
+
+void render(SDL_Renderer* renderer, SDL_Rect* paddle, SDL_Rect* ball) {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 
-    SDL_SetRenderDrawColor(renderer, r, g, b, 255);
-    SDL_RenderFillRect(renderer, logo);
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_RenderFillRect(renderer, paddle);
+
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_RenderFillRect(renderer, ball);
+
     SDL_RenderPresent(renderer);
 }
 
@@ -76,18 +101,6 @@ int main(int argc, char *argv[]) {
     int window_width = 800;
     int window_height = 600;
 
-    float speed_x = 200.0f;
-    float speed_y = 200.0f;
-
-    Uint8 r = 255, g = 255, b = 255;
-
-    SDL_Rect logo;
-
-    logo.w = 100;
-    logo.h = 50;
-    logo.x = window_width / 2 - logo.w / 2;
-    logo.y = window_height / 2 - logo.h / 2;
-
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
 
@@ -97,6 +110,12 @@ int main(int argc, char *argv[]) {
 
     srand((unsigned)time(NULL));
 
+    SDL_Rect paddle = {window_width / 2 - 60, window_height - 20, 120, 10};
+    SDL_Rect ball = {window_width / 2 - 10, window_height / 2 - 10, 20, 20};
+
+    float ball_speed_x = 200.0f * (rand() % 2 == 0 ? 1 : -1);
+    float ball_speed_y = 200.0f;
+
     Uint32 lastTime = SDL_GetTicks();
 
     while (running) {
@@ -104,9 +123,10 @@ int main(int argc, char *argv[]) {
         float deltaTime = (currentTime - lastTime) / 1000.0f;
         lastTime = currentTime;
 
-        events_handling(&running);
-        update_logo_position(&logo, &speed_x, &speed_y, window_width, window_height, &r, &g, &b, deltaTime);
-        render_logo(renderer, &logo, r, g, b);
+        handle_events(&running, &paddle, window_width);
+        update_ball(&ball, &ball_speed_x, &ball_speed_y, &paddle, window_width, window_height);
+        render(renderer, &paddle, &ball);
+
         SDL_Delay(16);
     }
 
