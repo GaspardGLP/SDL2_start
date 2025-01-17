@@ -14,6 +14,7 @@ add_executable(SDL_start
         events.c
         game_logic.c
         render.c
+        menu.c
 )
 
 target_link_libraries(SDL_start
