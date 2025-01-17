@@ -11,6 +11,9 @@ include_directories( ${SDL2_INCLUDE_DIR} )
 add_executable(SDL_start
         main.c
         init.c
+        events.c
+        game_logic.c
+        render.c
 )
 
 target_link_libraries(SDL_start
