@@ -1,0 +1,3 @@
+C:/Users/Gaspard.GLP/Desktop/PROJET ENIGMA/C/SDL2_start/cmake-build-debug/CMakeFiles/SDL_start.dir
+C:/Users/Gaspard.GLP/Desktop/PROJET ENIGMA/C/SDL2_start/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Gaspard.GLP/Desktop/PROJET ENIGMA/C/SDL2_start/cmake-build-debug/CMakeFiles/rebuild_cache.dir

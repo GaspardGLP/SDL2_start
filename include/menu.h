@@ -3,17 +3,10 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include "game_logic.h"
 
-// Initialiser le menu
-int initialize_menu(SDL_Renderer* renderer, TTF_Font** font);
-
-// Afficher le menu principal
-void render_main_menu(SDL_Renderer* renderer, TTF_Font* font, int selected_option);
-
-// Afficher l'écran de fin de partie
-void render_game_over_menu(SDL_Renderer* renderer, TTF_Font* font, int score);
-
-// Nettoyer les ressources liées au menu
-void clean_menu(TTF_Font* font);
+// Fonctions pour gérer les menus
+void show_main_menu(SDL_Renderer* renderer, TTF_Font* font, GameState* game_state);
+void show_game_over(SDL_Renderer* renderer, TTF_Font* font, GameState* game_state);
 
 #endif // MENU_H

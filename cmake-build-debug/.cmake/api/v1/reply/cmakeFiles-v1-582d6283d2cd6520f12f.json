@@ -1,0 +1,201 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2Targets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2Targets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2mainTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2mainTargets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/SDL2mainTargets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/sdl2/sdlfind.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf/SDL2_ttfConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf/SDL2_ttfConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf/SDL2_ttf-shared-targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf/SDL2_ttf-shared-targets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Gaspard.GLP/.vcpkg-clion/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf/SDL2_ttf-shared-targets-release.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/Users/Gaspard.GLP/Desktop/PROJET ENIGMA/C/SDL2_start/cmake-build-debug",
+		"source" : "C:/Users/Gaspard.GLP/Desktop/PROJET ENIGMA/C/SDL2_start"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

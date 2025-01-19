@@ -1,50 +1,38 @@
 #include "include/init.h"
-#include <stdio.h>
+#include "include/events.h"
+#include "include/game_logic.h"
+#include "include/render.h"
+#include "include/menu.h"
+#include "include/score.h"
+#include "include/utils.h"
+#include <SDL.h>
 
-// Fonction pour initialiser SDL, la fenêtre et le renderer
 int initialize(SDL_Window** window, SDL_Renderer** renderer, int width, int height) {
-    // Initialiser SDL
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
-        printf("Erreur : Impossible d'initialiser SDL : %s\n", SDL_GetError());
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        SDL_Log("SDL could not initialize: %s", SDL_GetError());
         return 0;
     }
 
-    // Créer une fenêtre SDL
-    *window = SDL_CreateWindow(
-        "Casse-Brique",
-        SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED,
-        width,
-        height,
-        SDL_WINDOW_SHOWN
-    );
-
-    if (*window == NULL) {
-        printf("Erreur : Impossible de créer la fenêtre : %s\n", SDL_GetError());
+    *window = SDL_CreateWindow("Brick Breaker", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
+    if (!*window) {
+        SDL_Log("Failed to create window: %s", SDL_GetError());
         SDL_Quit();
         return 0;
     }
 
-    // Créer un renderer SDL
     *renderer = SDL_CreateRenderer(*window, -1, SDL_RENDERER_ACCELERATED);
-    if (*renderer == NULL) {
-        printf("Erreur : Impossible de créer le renderer : %s\n", SDL_GetError());
+    if (!*renderer) {
+        SDL_Log("Failed to create renderer: %s", SDL_GetError());
         SDL_DestroyWindow(*window);
         SDL_Quit();
         return 0;
     }
 
-    // Réussite
     return 1;
 }
 
-// Fonction pour libérer les ressources SDL
 void clean_SDL(SDL_Window* window, SDL_Renderer* renderer) {
-    if (renderer != NULL) {
-        SDL_DestroyRenderer(renderer);
-    }
-    if (window != NULL) {
-        SDL_DestroyWindow(window);
-    }
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
     SDL_Quit();
 }

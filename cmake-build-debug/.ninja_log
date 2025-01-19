@@ -1,0 +1,15 @@
+# ninja log v6
+28	668	7590094123373420	build.ninja	9890f5c81a74c5d1
+44	880	7587302020809257	CMakeFiles/SDL_start.dir/main.c.obj	294f951a2a82f2dd
+881	3601	7587302029175109	SDL_start.exe	709e043bb0dda180
+35	447	7590094123373420	build.ninja	9890f5c81a74c5d1
+64	1167	7590094125011426	CMakeFiles/SDL_start.dir/menu.c.obj	c0f0a71b1c495d25
+29	1182	7590094124654530	CMakeFiles/SDL_start.dir/main.c.obj	294f951a2a82f2dd
+40	1190	7590094124764601	CMakeFiles/SDL_start.dir/events.c.obj	38744d6dc816e0f3
+35	1201	7590094124713454	CMakeFiles/SDL_start.dir/init.c.obj	5e712d272655ae2
+46	1203	7590094124824431	CMakeFiles/SDL_start.dir/game_logic.c.obj	c8b689cbf6038cb5
+54	1219	7590094124900877	CMakeFiles/SDL_start.dir/render.c.obj	b91134b02d2a22a5
+1190	1963	7590094136268688	CMakeFiles/SDL_start.dir/utils.c.obj	dd14b89ba39bd4
+1168	1992	7590094136041640	CMakeFiles/SDL_start.dir/button.c.obj	abb991a035301fd7
+1182	2009	7590094136188174	CMakeFiles/SDL_start.dir/score.c.obj	8241d0dc8e87cc1c
+2009	6702	7590094144461718	SDL_start.exe	70fcfb5cc3503bd8

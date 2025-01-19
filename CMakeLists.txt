@@ -15,6 +15,9 @@ add_executable(SDL_start
         game_logic.c
         render.c
         menu.c
+        button.c
+        score.c
+        utils.c
 )
 
 target_link_libraries(SDL_start

@@ -3,10 +3,10 @@
 
 #include <SDL.h>
 
-// Fonction pour initialiser SDL, la fenêtre et le renderer
+// Initialisation de la fenêtre et du rendu
 int initialize(SDL_Window** window, SDL_Renderer** renderer, int width, int height);
 
-// Fonction pour libérer les ressources SDL
+// Nettoyage des ressources SDL
 void clean_SDL(SDL_Window* window, SDL_Renderer* renderer);
 
 #endif // INIT_H
